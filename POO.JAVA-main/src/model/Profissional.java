@@ -2,8 +2,8 @@ package model;
 import model.Paciente;
 import java.util.*;
 
-public class Proficional {
-    protected String idProficional;
+public class Profissional {
+    protected String idProfissional;
     protected Departamento departamento;
     protected List<String> contacto;
     protected char genero;
@@ -11,9 +11,9 @@ public class Proficional {
     protected List<Paciente> pacientes;
     protected String numeroCedulaProfissional;
 
-    public Proficional(String idProficional, Departamento departamento, List<String> contacto, char genero, String nome,
+    public Profissional(String idProfissional, Departamento departamento, List<String> contacto, char genero, String nome,
             List<Paciente> pacientes, String numeroCedulaProfissional) {
-        this.idProficional = idProficional;
+        this.idProfissional = idProfissional;
         this.departamento = departamento;
         this.contacto = contacto;
         this.genero = genero;
@@ -21,8 +21,8 @@ public class Proficional {
         this.pacientes = pacientes;
         this.numeroCedulaProfissional = numeroCedulaProfissional;
     }
-    public String getIdProficional() {
-        return idProficional;
+    public String getIdProfissional() {
+        return idProfissional;
     }
     public Departamento getDepartamento() {
         return departamento;
