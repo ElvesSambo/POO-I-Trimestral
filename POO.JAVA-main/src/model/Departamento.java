@@ -1,35 +1,35 @@
 package model;
-import model.Proficional;
+import model.Profissional;
 import java.util.*;
 
 public class Departamento {
     private String nome;
     private int idDepartamento;
-    private List<Proficional> proficionais;
+    private List<Profissional> profissionais;
     public String getNome() {
         return nome;
     }
     public int getIdDepartamento() {
         return idDepartamento;
     }
-    public List<Proficional> getProficionais() {
-        return proficionais;
+    public List<Proficional> getProfissionais() {
+        return profissionais;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
-     public void setProficionais(List<Proficional> proficionais) {
-        this.proficionais = proficionais;
+     public void setProfissionais(List<Profissional> profissionais) {
+        this.profissionais = profissionais;
     }
     
     public Departamento(String nome, int idDepartamento) {
         this.nome = nome;
         this.idDepartamento = idDepartamento;
-        this.proficionais=proficionais;
+        this.profissionais=profissionais;
     }
     @Override
     public String toString() {
-        return "Departamento [nome=" + nome + ", idDepartamento=" + idDepartamento + ", proficionais=" + proficionais + "]";
+        return "Departamento [nome=" + nome + ", idDepartamento=" + idDepartamento + ", profissionais=" + profissionais + "]";
     }
    
     
