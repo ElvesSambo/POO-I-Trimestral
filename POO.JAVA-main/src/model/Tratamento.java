@@ -10,22 +10,8 @@ public class Tratamento implements Serializable {
     private String descricao;
     private String dataInicio;
     private String dataFim;
-    private Paciente paciente;
-    private List<Profissional> proficionais;
-
-    public Tratamento(String tipo, String descricao, String dataInicio, String dataFim, Paciente paciente,
-            List<Profissional> proficionais) {
-        this.tipo = tipo;
-        this.descricao = descricao;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
-        this.paciente = paciente;
-        this.proficionais = proficionais;
-    }
-
-    public int getIdTratamento() {
-        return idTratamento;
-    }
+    private Paciente pacientes;
+    private List<Profissional> profissionais;
     public String getTipo() {
         return tipo;
     }
@@ -41,8 +27,8 @@ public class Tratamento implements Serializable {
     public Paciente getPaciente() {
         return paciente;
     }
-    public List<Profissional> getProficionais() {
-        return proficionais;
+    public List<Profissional> getProfissionais() {
+        return profissionais;
     }
     public void setTipo(String tipo) {
         this.tipo = tipo;
@@ -56,11 +42,20 @@ public class Tratamento implements Serializable {
     public void setDataFim(String dataFim) {
         this.dataFim = dataFim;
     }
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPacientes(Paciente pacientes) {
+        this.pacientes = pacientes;
     }
-    public void setProficionais(List<Profissional> proficionais) {
-        this.proficionais = proficionais;
+    public void setProfissionais(List<Profissional> profissionais) {
+        this.profissionais = profissionais;
+    }
+    public Tratamento(String tipo, String descricao, String dataInicio, String dataFim, Paciente pacientes,
+            List<Profissional> profissionais) {
+        this.tipo = tipo;
+        this.descricao = descricao;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+        this.pacientes = pacientes;
+        this.profissionais = profissionais;
     }
 
 }

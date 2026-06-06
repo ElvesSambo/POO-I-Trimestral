@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import model.Profissional;
 import java.util.*;
 
 public class Departamento implements Serializable {
@@ -17,6 +18,9 @@ public class Departamento implements Serializable {
 
     public String getNomeDepartamento() {
         return nomeDepartamento;
+    private List<Profissional> profissionais;
+    public String getNome() {
+        return nome;
     }
     public int getIdDepartamento() {
         return idDepartamento;
@@ -29,11 +33,25 @@ public class Departamento implements Serializable {
     }
     public void setProfissionaisDoDepartamento(ArrayList<Profissional> profissionaisDoDepartamento) {
         this.profissionaisDoDepartamento = profissionaisDoDepartamento;
+    public List<Profissional> getProfissionais() {
+        return profissionais;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+     public void setProfissionais(List<Profissional> profissionais) {
+        this.profissionais = profissionais;
+    }
+    
+    public Departamento(String nome, int idDepartamento) {
+        this.nome = nome;
+        this.idDepartamento = idDepartamento;
+        this.profissionais=profissionais;
     }
 
     @Override
     public String toString() {
-        return "Departamento [idDepartamento=" + idDepartamento + ", nomeDepartamento=" + nomeDepartamento + ", profissionais=" + profissionaisDoDepartamento + "]";
+        return "Departamento [nome=" + nome + ", idDepartamento=" + idDepartamento + ", profissionais=" + profissionais + "]";
     }
 
 }

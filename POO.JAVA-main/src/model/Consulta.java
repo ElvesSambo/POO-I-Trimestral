@@ -1,6 +1,8 @@
 package model;
 
 import java.io.Serializable;
+import model.Paciente;
+import model.Profissional;
 
 public class Consulta implements Serializable {
 
@@ -70,5 +72,15 @@ public class Consulta implements Serializable {
     public void setDiagnostico(String diagnostico) {
         this.diagnostico = diagnostico;
     }
-
+    public Consulta(String data, String horas, String tipo, String obrservasoesClinicas, Paciente paciente,
+            Profissional profissional, String diagnostico) {
+        this.data = data;
+        this.horas = horas;
+        this.tipo = tipo;
+        this.obrservasoesClinicas = obrservasoesClinicas;
+        this.paciente = paciente;
+        this.profissional = profissional;
+        this.diagnostico = diagnostico;
+    }
+    
 }
