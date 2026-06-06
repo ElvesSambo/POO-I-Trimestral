@@ -2,7 +2,7 @@ package model;
 import java.util.List;
 
 import model.Paciente;
-import model.Proficional;
+import model.Profissional;
 
 public class Consulta {
     private String data;
@@ -10,7 +10,7 @@ public class Consulta {
     private String tipo;
     private String obrservasoesClinicas;
     private Paciente paciente;
-    private Proficional proficional;
+    private Profissional profissional;
     private String diagnostico;
     public String getData() {
         return data;
@@ -27,8 +27,8 @@ public class Consulta {
     public Paciente getPaciente() {
         return paciente;
     }
-    public Proficional getProficional() {
-        return proficional;
+    public Proficional getProfissional() {
+        return profissional;
     }
     public String getDiagnostico() {
         return diagnostico;
@@ -48,20 +48,20 @@ public class Consulta {
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
-    public void setProficional(Proficional proficional) {
-        this.proficional = proficional;
+    public void setProfissional(Profissional profissional) {
+        this.profissional = profissional;
     }
     public void setDiagnostico(String diagnostico) {
         this.diagnostico = diagnostico;
     }
     public Consulta(String data, String horas, String tipo, String obrservasoesClinicas, Paciente paciente,
-            Proficional proficional, String diagnostico) {
+            Profissional profissional, String diagnostico) {
         this.data = data;
         this.horas = horas;
         this.tipo = tipo;
         this.obrservasoesClinicas = obrservasoesClinicas;
         this.paciente = paciente;
-        this.proficional = proficional;
+        this.profissional = profissional;
         this.diagnostico = diagnostico;
     }
     
