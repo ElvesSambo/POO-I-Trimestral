@@ -1,39 +1,39 @@
 package model;
-import model.Proficional;
+
+import java.io.Serializable;
 import java.util.*;
 
-public class Departamento {
-    private String nome;
+public class Departamento implements Serializable {
+
+    private String nomeDepartamento;
     private int idDepartamento;
-    private List<Proficional> proficionais;
-    public String getNome() {
-        return nome;
+    private ArrayList<Profissional> profissionaisDoDepartamento;
+
+    public Departamento(String nomeDepartamento, int idDepartamento) {
+        this.nomeDepartamento = nomeDepartamento;
+        this.idDepartamento = idDepartamento;
+        this.profissionaisDoDepartamento = new ArrayList<>();
+    }
+
+    public String getNomeDepartamento() {
+        return nomeDepartamento;
     }
     public int getIdDepartamento() {
         return idDepartamento;
     }
-    public List<Proficional> getProficionais() {
-        return proficionais;
+    public ArrayList<Profissional> getProfissionaisDoDepartamento() {
+        return profissionaisDoDepartamento;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeDepartamento(String nomeDepartamento) {
+        this.nomeDepartamento = nomeDepartamento;
     }
-     public void setProficionais(List<Proficional> proficionais) {
-        this.proficionais = proficionais;
+    public void setProfissionaisDoDepartamento(ArrayList<Profissional> profissionaisDoDepartamento) {
+        this.profissionaisDoDepartamento = profissionaisDoDepartamento;
     }
-    
-    public Departamento(String nome, int idDepartamento) {
-        this.nome = nome;
-        this.idDepartamento = idDepartamento;
-        this.proficionais=proficionais;
-    }
+
     @Override
     public String toString() {
-        return "Departamento [nome=" + nome + ", idDepartamento=" + idDepartamento + ", proficionais=" + proficionais + "]";
+        return "Departamento [idDepartamento=" + idDepartamento + ", nomeDepartamento=" + nomeDepartamento + ", profissionais=" + profissionaisDoDepartamento + "]";
     }
-   
-    
-    
-
 
 }

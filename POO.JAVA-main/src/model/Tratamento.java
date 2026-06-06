@@ -1,13 +1,31 @@
 package model;
+
+import java.io.Serializable;
 import java.util.*;
 
-public class Tratamento {
+public class Tratamento implements Serializable {
+
+    private int idTratamento;
     private String tipo;
     private String descricao;
     private String dataInicio;
     private String dataFim;
-    private Paciente pacientes;
-    private List<Proficional> proficionais;
+    private Paciente paciente;
+    private List<Profissional> proficionais;
+
+    public Tratamento(String tipo, String descricao, String dataInicio, String dataFim, Paciente paciente,
+            List<Profissional> proficionais) {
+        this.tipo = tipo;
+        this.descricao = descricao;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+        this.paciente = paciente;
+        this.proficionais = proficionais;
+    }
+
+    public int getIdTratamento() {
+        return idTratamento;
+    }
     public String getTipo() {
         return tipo;
     }
@@ -20,10 +38,10 @@ public class Tratamento {
     public String getDataFim() {
         return dataFim;
     }
-    public Paciente getPacientes() {
-        return pacientes;
+    public Paciente getPaciente() {
+        return paciente;
     }
-    public List<Proficional> getProficionais() {
+    public List<Profissional> getProficionais() {
         return proficionais;
     }
     public void setTipo(String tipo) {
@@ -38,21 +56,11 @@ public class Tratamento {
     public void setDataFim(String dataFim) {
         this.dataFim = dataFim;
     }
-    public void setPacientes(Paciente pacientes) {
-        this.pacientes = pacientes;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
-    public void setProficionais(List<Proficional> proficionais) {
-        this.proficionais = proficionais;
-    }
-    public Tratamento(String tipo, String descricao, String dataInicio, String dataFim, Paciente pacientes,
-            List<Proficional> proficionais) {
-        this.tipo = tipo;
-        this.descricao = descricao;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
-        this.pacientes = pacientes;
+    public void setProficionais(List<Profissional> proficionais) {
         this.proficionais = proficionais;
     }
 
-    
 }
