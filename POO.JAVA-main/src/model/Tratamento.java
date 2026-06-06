@@ -7,7 +7,7 @@ public class Tratamento {
     private String dataInicio;
     private String dataFim;
     private Paciente pacientes;
-    private List<Proficional> proficionais;
+    private List<Profissional> profissionais;
     public String getTipo() {
         return tipo;
     }
@@ -23,8 +23,8 @@ public class Tratamento {
     public Paciente getPacientes() {
         return pacientes;
     }
-    public List<Proficional> getProficionais() {
-        return proficionais;
+    public List<Profissional> getProfissionais() {
+        return profissionais;
     }
     public void setTipo(String tipo) {
         this.tipo = tipo;
@@ -41,17 +41,17 @@ public class Tratamento {
     public void setPacientes(Paciente pacientes) {
         this.pacientes = pacientes;
     }
-    public void setProficionais(List<Proficional> proficionais) {
-        this.proficionais = proficionais;
+    public void setProfissionais(List<Profissional> profissionais) {
+        this.profissionais = profissionais;
     }
     public Tratamento(String tipo, String descricao, String dataInicio, String dataFim, Paciente pacientes,
-            List<Proficional> proficionais) {
+            List<Profissional> profissionais) {
         this.tipo = tipo;
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
         this.pacientes = pacientes;
-        this.proficionais = proficionais;
+        this.profissionais = profissionais;
     }
 
     
